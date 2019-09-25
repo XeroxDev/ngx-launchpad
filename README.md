@@ -1,27 +1,63 @@
-# NgxLaunchpad
+# NGXLaunchpad
+A small library for [angular 8](http://angular.io) to communicate with a Novation Launchpad. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
+This library uses the [Launchpad WebMIDI](https://github.com/LostInBrittany/launchpad-webmidi) library. Shoutout to
+ [LostInBrittany](https://github.com/LostInBrittany) for his really nice work! Without his work, my work would be
+  even harder ;) Don't forget to give him a star
+  ♥.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Install via [`npm`](https://www.npmjs.com/):
 
-## Code scaffolding
+```bash
+npm install --save ngx-launchpad
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
+Implement the ``NgxLaunchpadModule`` into your module like this:
+```typescript
+import {NgxLaunchpadModule} from '../../../ngx-launchpad/src/lib/ngx-launchpad.module';
 
-## Build
+@NgModule({
+  declarations: [MyComponent],
+  imports: [
+    BrowserModule,
+    NgxLaunchpadModule // <-- include it in your app module
+  ],
+  bootstrap: [MyComponent]
+})
+```
+and then, you can import the ``NgxLaunchpadService`` into every component like this:
+```typescript
+constructor(private launchpadService: NgxLaunchpadService) {
+}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Small overview
+#### Important or interesting functions
+```typescript
+pad.connect(); // <-- Connecting with Launchpad
+pad.disconnect() // <-- Disconnection from Launchpad
+pad.onConnect().subscribe(() => console.log('connected')); // <-- Listen to the connect event
+pad.onDisconnect().subscribe(() => console.log('disconnected')); // <-- Listen to the disconnect event
+pad.onKey().subscribe(key => console.log( `Key ${key.x},${key.y} down: ${key.pressed}`)); // <-- Listen to the key
+ pressed / released event
+pad.col(pad.Colors.red, [0, 0]); // <-- Color a key
+```
+#### Colors
+```
+pad.Colors.red;
+pad.Colors.green;
+pad.Colors.yellow;
+pad.Colors.amber;
+pad.Colors.off;
+pad.Colors.red.medium;
+pad.Colors.red.low;
+pad.Colors.red.full; // Default strength
+```
+And much, much more
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[MIT License](http://opensource.org/licenses/MIT)

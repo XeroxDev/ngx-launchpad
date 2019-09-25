@@ -4,5 +4,8 @@
   "peerDependencies": {
     "@angular/common": "^8.2.7",
     "@angular/core": "^8.2.7"
+  },
+  "dependencies": {
+    "launchpad-webmidi": "^1.0.0"
   }
 }

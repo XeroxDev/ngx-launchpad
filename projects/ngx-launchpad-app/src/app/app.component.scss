@@ -1,0 +1,23 @@
+.row {
+  display: inline-flex;
+}
+
+.key {
+  margin: 4px;
+  width: 5vw;
+  height: 9vh;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &.circled {
+    border-radius: 50%;
+  }
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
