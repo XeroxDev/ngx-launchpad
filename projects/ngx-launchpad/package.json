@@ -1,6 +1,6 @@
 {
   "name": "ngx-launchpad",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple module / service for communication with a Novation Launchpad",
   "homepage": "https://github.com/XeroxDev/ngx-launchpad",
   "license": "MIT",
