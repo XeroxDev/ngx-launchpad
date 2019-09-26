@@ -9,6 +9,10 @@
     "name": "Dominic 'XeroxDev' Ris",
     "url": "https://xeroxdev.de"
   },
+  "bugs": {
+    "url": "https://github.com/XeroxDev/ngx-launchpad/issues",
+    "email": "help@xeroxdev.de"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/XeroxDev/ngx-launchpad.git"
@@ -25,7 +29,8 @@
     "build": "ng build",
     "test": "echo \"No test specified\"",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish": "ng build ngx-launchpad && np --contents=dist/ngx-launchpad"
   },
   "private": false,
   "dependencies": {
