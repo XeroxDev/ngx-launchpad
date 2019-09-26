@@ -1,12 +1,23 @@
 {
   "name": "ngx-launchpad",
   "version": "1.0.0",
+  "description": "A simple module / service for communication with a Novation Launchpad",
+  "homepage": "https://github.com/XeroxDev/ngx-launchpad",
+  "license": "MIT",
+  "author": {
+    "email": "help@xeroxdev.de",
+    "name": "Dominic 'XeroxDev' Ris",
+    "url": "https://xeroxdev.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XeroxDev/ngx-launchpad.git"
+  },
   "keywords": [
-    "Angular",
-    "Angular 8",
-    "Launchpad",
-    "Novation",
-    "Novation Launchpad"
+    "angular",
+    "angular 8",
+    "launchpad",
+    "novation"
   ],
   "scripts": {
     "ng": "ng",
@@ -16,7 +27,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.3",
     "@angular/common": "~8.2.3",
