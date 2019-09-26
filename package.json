@@ -32,7 +32,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:pkg": "ng build ngx-launchpad",
-    "update-library-version": "node ./scripts/build.js && cp -f *.md dist/ngx-launchpad",
+    "update-library-version": "node ./scripts/build.js && copy *.md dist/ngx-launchpad",
     "postversion": "git push && git push --tags",
     "prepublish": "npm run build && npm run build:pkg && npm run update-library-version",
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && npm run build:pkg && npm run update-library-version && git add ."
