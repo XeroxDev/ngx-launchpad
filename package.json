@@ -28,9 +28,15 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "echo \"No test specified\"",
+    "tdd": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngpublish": "ng build ngx-launchpad && np --contents=dist/ngx-launchpad"
+    "build:pkg": "ng build ngx-launchpad",
+    "update-library-version": "node ./scripts/build.js && cp -f *.md dist/ngx-launchpad",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build && npm run build:pkg && npm run update-library-version",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && npm run build:pkg && npm run update-library-version && git add .",
+    "npupload": "np —-no-yarn --contents=./dist/ngx-launchpad"
   },
   "private": false,
   "dependencies": {
@@ -70,6 +76,7 @@
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
-    "launchpad-webmidi": "^1.0.0"
+    "launchpad-webmidi": "^1.0.0",
+    "version-changelog": "^3.1.0"
   }
 }
