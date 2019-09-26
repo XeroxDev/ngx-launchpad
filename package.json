@@ -80,6 +80,7 @@
   },
   "np": {
     "yarn": false,
-    "contents": "./dist/ngx-launchpad"
+    "contents": "./dist/ngx-launchpad",
+    "yolo": true
   }
 }
