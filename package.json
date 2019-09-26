@@ -1,12 +1,18 @@
 {
   "name": "ngx-launchpad",
   "version": "1.0.0",
-  "keywords": ["Angular", "Angular 8", "Launchpad", "Novation", "Novation Launchpad"],
+  "keywords": [
+    "Angular",
+    "Angular 8",
+    "Launchpad",
+    "Novation",
+    "Novation Launchpad"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "echo \"No test specified\"",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
