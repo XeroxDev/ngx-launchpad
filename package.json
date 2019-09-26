@@ -1,6 +1,7 @@
 {
   "name": "ngx-launchpad",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "keywords": ["Angular", "Angular 8", "Launchpad", "Novation", "Novation Launchpad"],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

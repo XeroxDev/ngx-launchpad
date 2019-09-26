@@ -1,6 +1,7 @@
 {
   "name": "ngx-launchpad",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "keywords": ["Angular", "Angular 8", "Launchpad", "Novation", "Novation Launchpad"],
   "peerDependencies": {
     "@angular/common": "^8.2.7",
     "@angular/core": "^8.2.7"
